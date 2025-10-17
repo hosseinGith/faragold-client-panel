@@ -42,6 +42,11 @@ body {
     @apply cursor-pointer flex gap-2 items-center h-[50px]
 }
 
+.nav-pages.nav-pages-row li {
+    @apply flex-col h-max p-0 !items-center !justify-center
+}
+
+
 .nav-pages li:hover {
     @apply !opacity-100
 }
@@ -52,7 +57,13 @@ body {
 }
 
 .nav-pages li .border_selected {
-    @apply w-[7px] h-full bg-[var(--main-color-foreground)] opacity-0 transition rounded-l-md
+    @apply w-[7px] h-full bg-[var(--main-color-foreground)] opacity-0 transition 
+}
+.nav-pages:not(.nav-pages-row) li .border_selected {
+    @apply rounded-l-md
+}
+.nav-pages.nav-pages-row li .border_selected {
+    @apply w-full !h-[7px] rounded-t-2xl
 }
 
 .nav-pages li.active .border_selected {
@@ -63,6 +74,6 @@ body {
     @apply opacity-100
 }
 
-.hiddenWithImportant{
+.hiddenWithImportant {
     @apply !hidden
 }

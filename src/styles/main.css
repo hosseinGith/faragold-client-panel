@@ -202,6 +202,9 @@
       max-width: 96rem;
     }
   }
+  .mx-auto {
+    margin-inline: auto;
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -256,6 +259,12 @@
   .h-full {
     height: 100%;
   }
+  .max-h-\[27px\] {
+    max-height: 27px;
+  }
+  .max-h-\[28px\] {
+    max-height: 28px;
+  }
   .max-h-\[30px\] {
     max-height: 30px;
   }
@@ -291,6 +300,12 @@
   }
   .w-full {
     width: 100%;
+  }
+  .max-w-\[27px\] {
+    max-width: 27px;
+  }
+  .max-w-\[28px\] {
+    max-width: 28px;
   }
   .max-w-\[30px\] {
     max-width: 30px;
@@ -346,13 +361,6 @@
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
-  .space-y-4 {
-    :where(& > :not(:last-child)) {
-      --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
-    }
-  }
   .divide-x-2 {
     :where(& > :not(:last-child)) {
       --tw-divide-x-reverse: 0;
@@ -389,6 +397,10 @@
   }
   .rounded-md {
     border-radius: var(--radius-md);
+  }
+  .rounded-t-2xl {
+    border-top-left-radius: var(--radius-2xl);
+    border-top-right-radius: var(--radius-2xl);
   }
   .rounded-tl-\[100px\] {
     border-top-left-radius: 100px;
@@ -467,14 +479,23 @@
   .object-contain {
     object-fit: contain;
   }
+  .p-0 {
+    padding: calc(var(--spacing) * 0);
+  }
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
   .p-\[5px\] {
     padding: 5px;
   }
+  .px-1 {
+    padding-inline: calc(var(--spacing) * 1);
+  }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
   }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
@@ -493,6 +514,9 @@
   }
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
+  }
+  .pb-\[78px\] {
+    padding-bottom: 78px;
   }
   .text-center {
     text-align: center;
@@ -695,6 +719,11 @@
       display: none;
     }
   }
+  .lg\:w-max {
+    @media (width >= 64rem) {
+      width: max-content;
+    }
+  }
   .lg\:min-w-0 {
     @media (width >= 64rem) {
       min-width: calc(var(--spacing) * 0);
@@ -776,6 +805,13 @@ body {
   align-items: center;
   gap: calc(var(--spacing) * 2);
 }
+.nav-pages.nav-pages-row li {
+  height: max-content;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: calc(var(--spacing) * 0);
+}
 .nav-pages li:hover {
   opacity: 100% !important;
 }
@@ -785,13 +821,21 @@ body {
 .nav-pages li .border_selected {
   height: 100%;
   width: 7px;
-  border-top-left-radius: var(--radius-md);
-  border-bottom-left-radius: var(--radius-md);
   background-color: var(--main-color-foreground);
   opacity: 0%;
   transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
   transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
   transition-duration: var(--tw-duration, var(--default-transition-duration));
+}
+.nav-pages:not(.nav-pages-row) li .border_selected {
+  border-top-left-radius: var(--radius-md);
+  border-bottom-left-radius: var(--radius-md);
+}
+.nav-pages.nav-pages-row li .border_selected {
+  height: 7px !important;
+  width: 100%;
+  border-top-left-radius: var(--radius-2xl);
+  border-top-right-radius: var(--radius-2xl);
 }
 .nav-pages li.active .border_selected {
   opacity: 100%;
@@ -801,11 +845,6 @@ body {
 }
 .hiddenWithImportant {
   display: none !important;
-}
-@property --tw-space-y-reverse {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
 }
 @property --tw-divide-x-reverse {
   syntax: "*";
@@ -879,10 +918,14 @@ body {
   syntax: "*";
   inherits: false;
 }
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-space-y-reverse: 0;
       --tw-divide-x-reverse: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;
@@ -900,6 +943,7 @@ body {
       --tw-drop-shadow-color: initial;
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
+      --tw-space-y-reverse: 0;
     }
   }
 }
