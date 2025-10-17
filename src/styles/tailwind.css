@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: iransans;
+    src: url(/src/assets/fonts/iransans.woff) format('woff');
+}
+
+:root {
+    --background: #f9f9f9;
+    --foreground: #616161;
+    --main-color: #25316d;
+    --main-color-foreground: #fff;
+    --main-color-2: #0d6efd;
+    --main-color-2-foreground: #fff;
+    --main-color-3: #fd7e14;
+    --date-bg: #282F44;
+    --date-bg-text: #fff;
+    --main-color-4: #e9e9e9;
+    --danger: red;
+    --highLightDanger: #E53C3C30;
+    --success: green;
+    --info: yellow;
+}
+
+@layer base {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+}
+
+body {
+    @apply font-[iransans] text-sm bg-[var(--background)] h-screen
+}
+
+#container {
+    @apply w-full overflow-y-auto overflow-x-hidden absolute left-0 top-0 lg:grid lg:grid-cols-[max-content_1fr_max-content] grid-rows-[1fr] h-full
+}
+
+.nav-pages li {
+    @apply cursor-pointer flex gap-2 items-center h-[50px]
+}
+
+.nav-pages li:hover {
+    @apply !opacity-100
+}
+
+
+.nav-pages li.disabled {
+    @apply opacity-50
+}
+
+.nav-pages li .border_selected {
+    @apply w-[7px] h-full bg-[var(--main-color-foreground)] opacity-0 transition rounded-l-md
+}
+
+.nav-pages li.active .border_selected {
+    @apply opacity-100
+}
+
+.nav-pages li:hover .border_selected {
+    @apply opacity-100
+}
+
+.hiddenWithImportant{
+    @apply !hidden
+}

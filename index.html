@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <svg class="hidden">
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        id="homeIcon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        id="doc-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        id="cash-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        id="menu"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        id="date-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        id="bell-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        id="lock-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        id="eay-icon-open"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+          fill="#fff"
+        />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke="currentColor"
+          d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        id="arrow-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m19.5 8.25-7.5 7.5-7.5-7.5"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+        id="antenna-icon"
+        viewBox="0 0 214.6274 217.94"
+        enable-background="new 0 0 214.6274 217.94"
+      >
+        <g>
+          <polygon
+            fill="transparent"
+            points="117.6292,101.936 112.7808,85.936 102.7144,85.936 97.866,101.936  "
+          />
+          <circle fill="currentColor" cx="107.7476" cy="49.936" r="8" />
+          <polygon
+            fill="transparent"
+            points="81.3608,157.936 75.189,177.936 140.5718,177.936 134.5698,157.936  "
+          />
+          <polygon
+            fill="transparent"
+            points="95.4417,109.936 83.3208,149.936 132.1743,149.936 120.0535,109.936  "
+          />
+          <path
+            fill="currentColor"
+            d="M107.7476,65.936c8.8223,0,16-7.1777,16-16s-7.1777-16-16-16s-16,7.1777-16,16   S98.9253,65.936,107.7476,65.936z M107.7476,41.936c4.4121,0,8,3.5879,8,8s-3.5879,8-8,8s-8-3.5879-8-8   S103.3354,41.936,107.7476,41.936z"
+          />
+          <path
+            fill="currentColor"
+            d="M133.1421,81.0981c0.7812,0.7852,1.8066,1.1777,2.834,1.1777c1.0214,0,2.043-0.3887,2.8223-1.166   c8.3496-8.3164,12.9492-19.3867,12.9492-31.1719c0-11.5156-4.418-22.4043-12.4414-30.6621c-1.541-1.582-4.0703-1.6191-5.6562-0.082   c-1.584,1.5391-1.6211,4.0723-0.082,5.6562c6.5645,6.7578,10.1797,15.666,10.1797,25.0879c0,9.6426-3.7617,18.6992-10.5938,25.5039   C131.5874,77.0004,131.5835,79.5336,133.1421,81.0981z"
+          />
+          <path
+            fill="currentColor"
+            d="M79.7476,82.2758c1.0254,0,2.0527-0.3926,2.834-1.1777c1.5586-1.5645,1.5547-4.0977-0.0117-5.6562   c-6.832-6.8047-10.5938-15.8613-10.5938-25.5039c0-9.4219,3.6152-18.3301,10.1797-25.0879c1.5391-1.584,1.502-4.1172-0.082-5.6562   c-1.584-1.541-4.1172-1.5-5.6562,0.082c-8.0234,8.2578-12.4414,19.1465-12.4414,30.6621c0,11.7852,4.5996,22.8555,12.9492,31.1719   C77.7046,81.8872,78.7261,82.2758,79.7476,82.2758z"
+          />
+          <path
+            fill="currentColor"
+            d="M153.3589,99.1626c0.7812,0.7852,1.8066,1.1777,2.834,1.1777c1.0215,0,2.043-0.3887,2.8223-1.166   c13.2305-13.1777,20.5156-30.7168,20.5156-49.3887c0-18.2402-7-35.4902-19.7109-48.5723c-1.541-1.584-4.0703-1.6191-5.6562-0.082   c-1.584,1.5391-1.6211,4.0723-0.082,5.6562c11.252,11.582,17.4492,26.8516,17.4492,42.998   c0,16.5293-6.4492,32.0547-18.1602,43.7207C151.8042,95.0649,151.8003,97.5981,153.3589,99.1626z"
+          />
+          <path
+            fill="currentColor"
+            d="M59.5308,100.3403c1.0254,0,2.0527-0.3926,2.834-1.1777c1.5586-1.5645,1.5547-4.0977-0.0117-5.6562   c-11.7109-11.666-18.1602-27.1914-18.1602-43.7207c0-16.1465,6.1973-31.416,17.4492-42.998c1.5391-1.584,1.502-4.1172-0.082-5.6562   c-1.584-1.541-4.1172-1.502-5.6562,0.082c-12.7109,13.082-19.7109,30.332-19.7109,48.5723   c0,18.6719,7.2852,36.2109,20.5156,49.3887C57.4878,99.9516,58.5093,100.3403,59.5308,100.3403z"
+          />
+          <path
+            fill="currentColor"
+            d="M118.7144,77.936H96.7808L55.9194,212.7758c-0.6406,2.1152,0.5547,4.3477,2.668,4.9883   c2.1191,0.6484,4.3496-0.5527,4.9883-2.668l8.8362-29.1602h70.6714l8.8362,29.1602c0.5234,1.7266,2.1094,2.8418,3.8262,2.8418   c0.3848,0,0.7754-0.0566,1.1621-0.1738c2.1133-0.6406,3.3086-2.873,2.668-4.9883L118.7144,77.936z M112.7808,85.936l4.8484,16   H97.866l4.8484-16H112.7808z M75.189,177.936l6.1719-20h53.209l6.002,20H75.189z M83.3208,149.936l12.1208-40h24.6118l12.1208,40   H83.3208z"
+          />
+        </g>
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        width="25px"
+        height="25px"
+        viewBox="0 0 24 24"
+        id="capa_1-icon"
+        fill="currentColor"
+      >
+        <path
+          d="M17.0020048,13 C17.5542895,13 18.0020048,13.4477153 18.0020048,14 C18.0020048,14.5128358 17.6159646,14.9355072 17.1186259,14.9932723 L17.0020048,15 L5.41700475,15 L8.70911154,18.2928932 C9.0695955,18.6533772 9.09732503,19.2206082 8.79230014,19.6128994 L8.70911154,19.7071068 C8.34862757,20.0675907 7.78139652,20.0953203 7.38910531,19.7902954 L7.29489797,19.7071068 L2.29489797,14.7071068 C1.69232289,14.1045317 2.07433707,13.0928192 2.88837381,13.0059833 L3.00200475,13 L17.0020048,13 Z M16.6128994,4.20970461 L16.7071068,4.29289322 L21.7071068,9.29289322 C22.3096819,9.8954683 21.9276677,10.9071808 21.1136309,10.9940167 L21,11 L7,11 C6.44771525,11 6,10.5522847 6,10 C6,9.48716416 6.38604019,9.06449284 6.88337887,9.00672773 L7,9 L18.585,9 L15.2928932,5.70710678 C14.9324093,5.34662282 14.9046797,4.77939176 15.2097046,4.38710056 L15.2928932,4.29289322 C15.6533772,3.93240926 16.2206082,3.90467972 16.6128994,4.20970461 Z"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        id="dollar-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+        />
+      </symbol>
+    </svg>
+    <div
+      style="
+        background-image: url(https://pnl.zakerigold.com/CustomThemes/zakerigold/logo/newlogo.png);
+      "
+      class="fixed left-0 bottom-0 w-full h-[80%] pointer-events-none grayscale-100 opacity-[0.1] bg-no-repeat bg-center"
+    ></div>
+    <div id="container" class="lg:*:h-full">
+      <div
+        class="max-w-[300px] lg:grid hidden grid-rows-[max-content_1fr] gap-4"
+      >
+        <div class="flex items-center gap-2 pr-4 pt-4">
+          <div
+            class="rounded-full overflow-hidden bg-[#b7c6f1] w-[56px] h-[56px]"
+          >
+            <img
+              width="56"
+              height="56"
+              class="w-full h-full object-contain"
+              src="https://pnl.zakerigold.com/CustomThemes/zakerigold/logo/newlogo.png"
+              alt="xxx"
+            />
+          </div>
+          <h1 class="text-[16px]">بورس طلا و سکه ذاکری</h1>
+        </div>
+        <ul
+          class="nav-pages w-full flex gap-5 overflow-auto py-4 bg-[var(--main-color)] flex-col rounded-tl-[100px] text-[var(--main-color-foreground)] text-lg"
+        >
+          <li class="active">
+            <div class="border_selected"></div>
+            <svg class="max-w-[30px] max-h-[30px]">
+              <use href="#homeIcon"></use>
+            </svg>
+
+            <p>خرید/فروش</p>
+          </li>
+          <li>
+            <div class="border_selected"></div>
+            <svg class="max-w-[30px] max-h-[30px]">
+              <use href="#doc-icon"></use>
+            </svg>
+
+            <p>معاملات</p>
+          </li>
+          <li class="disabled">
+            <div class="border_selected"></div>
+            <svg class="max-w-[30px] max-h-[30px]">
+              <use href="#cash-icon"></use>
+            </svg>
+
+            <p>واریز وجه</p>
+          </li>
+          <li>
+            <div class="border_selected"></div>
+            <svg class="max-w-[30px] max-h-[30px]">
+              <use href="#menu"></use>
+            </svg>
+
+            <p>منو</p>
+          </li>
+
+          <li>
+            <div class="border_selected"></div>
+            <svg class="max-w-[30px] max-h-[30px]">
+              <use href="#homeIcon"></use>
+            </svg>
+
+            <p>خروج</p>
+          </li>
+        </ul>
+      </div>
+      <!-- movile header -->
+      <div
+        class="lg:hidden flex items-center bg-[var(--main-color)] text-[var(--main-color-foreground)] justify-between"
+      >
+        <div class="">
+          <h1 class="text-lg">بورس طلا و سکه ذاکری</h1>
+          <div class="flex items-center">
+            <svg class="w-[30px] h-[25px] text-[#00ad00]">
+              <use href="#antenna-icon" />
+            </svg>
+            <p>سید احمد فرح بخشیان</p>
+          </div>
+        </div>
+        <div class="py-2">
+          <div class="rounded-full overflow-hidden bg-[#fff] w-[56px] h-[56px]">
+            <img
+              width="56"
+              height="56"
+              class="w-full h-full object-contain"
+              src="https://pnl.zakerigold.com/CustomThemes/zakerigold/logo/newlogo.png"
+              alt="xxx"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:min-w-0 p-3 w-full">
+        <div class="lg:flex hidden justify-end text-[12px]">
+          <div
+            class="bg-[var(--date-bg)] flex gap-2 text-[var(--date-bg-text)] px-2 rounded-md py-2"
+          >
+            <svg class="fill-[var(--date-bg-text)] w-[20px] h-[20px]">
+              <use href="#date-icon"></use>
+            </svg>
+            <div id="date-couter" class="flex items-center">
+              جمعه 25 مهر 1404 ساعت
+              <span class="text-sm block w-[70px] px-2">10:14:26</span>
+            </div>
+          </div>
+        </div>
+        <main class="lg:mt-25 py-4 pr-4 overflow-auto">
+          <div class="flex gap-2 items-center">
+            <div
+              class="w-[16px] h-[16px] bg-[var(--danger)] rounded-full"
+            ></div>
+            <p class="text-[16px]">بورس طلا و سکه ذاکری</p>
+          </div>
+          <p
+            class="border-2 border-[var(--main-color)] rounded-lg py-2 px-2 text-[var(--foreground)]"
+          >
+            <svg class="w-[25px] h-[20px] inline-block">
+              <use href="#bell-icon" class="text-[var(--main-color)]"></use>
+            </svg>
+            همکاران گرامی مجموعه ذاکری انتقال وجه زیر 100 میلیون ندارد. لطفا
+            معاملات خود را مدیریت کنید. کلیه معاملات مجوعه ذاکری نقدی بوده و
+            خریدار یا فروشنده ملزم به جابجایی در همان روز یا روز بعد می باشد.
+            کلیه معاملات نقدی می باشد.
+          </p>
+          <div
+            class="justify-center text-[var(--foreground)] flex flex-col w-full text-center mb-8"
+          >
+            <svg class="">
+              <use href="#lock-icon"></use>
+            </svg>
+            <p class="text-lg">همکار گرامی، مغازه بسته است.</p>
+          </div>
+          <div class="max-w-full overflow-auto">
+            <div
+              class="rounded-lg bg-[var(--main-color-4)] min-w-max overflow-x-auto overflow-y-hidden flex flex-col gap-4 w-full py-2"
+            >
+              <div class="items-center flex">
+                <div
+                  class="lg:flex hidden w-full divide-x-2 divide-[#b3b3b3] px-2 *:w-full *:px-4 gap-4 *:gap-2 *:flex *:flex-col"
+                >
+                  <div>
+                    <span
+                      >مانده طلایی <span class="text-[12px]">(گرم)</span></span
+                    >
+                    <div class="flex justify-end text-[var(--danger)] gap-1">
+                      <span dir="ltr">-11.408</span>
+                      <span>بد</span>
+                    </div>
+                  </div>
+                  <div>
+                    <span
+                      >مانده ریالی <span class="text-[12px]">(ریال)</span></span
+                    >
+                    <div class="flex justify-end text-[var(--success)] gap-1">
+                      <span dir="ltr">786,725,133</span>
+                      <span>بس</span>
+                    </div>
+                  </div>
+                  <div>
+                    <span
+                      >مانده طلا منهای سکه<span class="text-[12px]"
+                        >(گرم)</span
+                      ></span
+                    >
+                    <div class="flex justify-end text-[var(--danger)] gap-1">
+                      <span dir="ltr">-11.408</span>
+                      <span>بد</span>
+                    </div>
+                  </div>
+                  <div>
+                    <span
+                      >مانده کل به طلا
+                      <span class="text-[12px]">(گرم)</span></span
+                    >
+                    <div class="flex justify-end text-[var(--danger)] gap-1">
+                      <span dir="ltr">-11.408</span>
+                      <span>بد</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="lg:border-r-2 lg:justify-start justify-between border-[#b3b3b3] flex items-center gap-2 px-2"
+                >
+                  <div class="flex lg:hidden idden gap-4 items-center">
+                    <span
+                      >مانده کل به طلا
+                      <span class="text-[12px]">(گرم)</span></span
+                    >
+                    <div
+                      class="flex justify-end text-[var(--danger)] gap-1 bg-[var(--highLightDanger)] px-2 py-1 rounded-lg font-bold"
+                    >
+                      <span dir="ltr">-11.408</span>
+                      <span>بد</span>
+                    </div>
+                  </div>
+                  <div
+                    class="flex gap-2 *:rounded-lg *:px-2 *:py-1 *:cursor-pointer"
+                  >
+                    <button class="bg-[var(--foreground)]">
+                      <svg class="w-[30px] h-[30px] text-[var(--foreground)]">
+                        <use href="#eay-icon-open"></use>
+                      </svg>
+                    </button>
+                    <button
+                      class="group hover:bg-[var(--foreground)] transition border border-[#707070]"
+                    >
+                      <svg
+                        class="w-[30px] h-[30px] group-hover:invert-100 transition"
+                      >
+                        <use href="#arrow-icon" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <hr  class="hiddenWithImportant lg:flex hidden opacity-30 border" />
+              <div
+                class="hiddenWithImportant flex gap-4 flex-wrap *:border *:border-[var(--foreground)] *:w-[200px] *:min-h-[50px] *:rounded-lg *:text-center *:space-y-1 *:py-1"
+              >
+                <div>
+                  <span dir="ltr" class="text-[var(--danger)] inline-block"
+                    >-1</span
+                  >
+                  <div>نيم سکه بانکي 86</div>
+                </div>
+                <div>
+                  <span dir="ltr" class="text-[var(--success)] inline-block"
+                    >1</span
+                  >
+                  <div>ربع سکه بانکي 86</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <div
+        class="max-w-[300px] lg:block hidden bg-[var(--main-color-4)] py-2 px-2"
+      >
+        <div class="flex gap-6 items-center">
+          <div class="w-[50px] h-[50px] overflow-hidden rounded-2xl">
+            <img
+              width="65"
+              height="65"
+              src="https://pnl.zakerigold.com/Themes/img/no_avatar.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <div class="flex items-center">
+              <svg class="w-[30px] h-[50px] text-[#00ad00]">
+                <use href="#antenna-icon" />
+              </svg>
+              <p>سید احمد فرح بخشیان</p>
+            </div>
+            <div class="text-[12px]">
+              <span>آخرین ورود :</span>
+              <span>1404/07/25</span>
+              <span>09:11:42</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-2 pt-4">
+          <div
+            class="w-[130px] bg-white flex items-center flex-col rounded-lg overflow-hidden justify-between"
+          >
+            <div
+              class="mt-2 bg-[var(--main-color-2)] rounded-lg p-[5px] text-[var(--main-color-2-foreground)] w-[35px] h-[35px]"
+            >
+              <svg class="w-full h-full">
+                <use href="#capa_1-icon" />
+              </svg>
+            </div>
+            <div>معاملات</div>
+            <div
+              class="bg-[var(--main-color-2)] text-[var(--main-color-2-foreground)] w-full text-center"
+            >
+              0
+            </div>
+          </div>
+          <div
+            class="w-[130px] border border-[#0000002d] flex items-center flex-col rounded-lg overflow-hidden"
+          >
+            <div
+              class="mt-2 rounded-lg p-[5px] text-[var(--main-color-3)] w-[45px] h-[45px]"
+            >
+              <svg class="w-full h-full">
+                <use href="#dollar-icon" />
+              </svg>
+            </div>
+            <div class="text-[12px]">تراز کل</div>
+            <div class="text-[var(--foreground)] w-full text-center py-2">
+              0 گرم
+            </div>
+          </div>
+        </div>
+        <div class="w-full mt-4 border-t-2 border-dotted pt-2">
+          <table class="w-full text-[12px]">
+            <thead class="">
+              <tr>
+                <th class="text-start py-2">نام</th>
+                <th class="text-start py-2">مقدار</th>
+                <th class="text-start py-2">مظنه</th>
+                <th class="text-start py-2">مبلغ کل</th>
+              </tr>
+            </thead>
+            <tbody class="border-t **:p-2">
+              <tr>
+                <td>حسین</td>
+                <td>5146541</td>
+                <td>54654</td>
+                <td>700000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
