@@ -1,0 +1,1 @@
+# faragold-client-panel
